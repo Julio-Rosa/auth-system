@@ -1,0 +1,70 @@
+<div class="form-bg">
+    <div class="success-popup" *ngIf="success">Successfully registered user</div>
+    <span class="sign">Create an account</span>
+    <form (ngSubmit)="onSubmit()" [formGroup]="signupForm">
+        <div class="form-container">
+            <label class="label" for="firstName">First Name</label>
+            <div class="input-div">
+                <input class="field-input" type="text" formControlName="firstName">
+            </div>
+            <div class="error" *ngIf="(f.firstName.dirty  || submitted) && f.firstName.errors">
+                <span class="danger" *ngIf="f.firstName.errors['required']">First name is required </span>
+                <span class="danger" *ngIf="f.firstName.errors['minlength']">Must be at least 3 characters long</span>
+    
+            </div>
+        </div>
+        <div class="form-container">
+            <label class="label" for="lastName">Last Name</label>
+            <div class="input-div">
+                <input class="field-input" type="text" formControlName="lastName">
+            </div>
+            <div class="error" *ngIf="(f.lastName.dirty  || submitted) && f.lastName.errors">
+                <span class="danger" *ngIf="f.lastName.errors['required']">Last name is required </span>
+                <span class="danger" *ngIf="f.lastName.errors['minlength']">Must be at least 3 characters long</span>
+    
+            </div>
+        </div>
+        <div clas class="form-container">
+            <label class="label" for="username">Username</label>
+            <div class="input-div">
+                <input class="field-input" type="text" formControlName="username">
+
+            </div>
+            <div class="error" *ngIf="(f.username.dirty  || submitted) && f.username.errors">
+                <span class="danger"  *ngIf="f.username.errors['required']">Username is required </span>
+                <span class="danger" *ngIf="f.username.errors['minlength']">Must be at least 3 characters long</span>
+            </div>
+            <span class="danger" *ngIf="userExists">Username already exists</span>
+            <span class="danger" *ngIf="genericError">An error occurred, please try again.</span>
+        </div>
+        <div class="form-container">
+            <label class="label" for="password">Password</label>
+            <div class="input-div">
+                <input class="field-input" [type]="inputTypePass ? 'text': 'password'" formControlName="password">
+                <span class="show" (click)="showPassword()">{{passtype}}</span>
+            </div>
+            <span class="danger" *ngIf="(f.password.dirty || submitted) && !requiredValid">Password is required</span>
+            <div class="error" *ngIf="requiredValid">
+                <span class="danger" *ngIf="!minLengthValid"> Must be at least 8 characters long</span>
+                <span class="danger" *ngIf="!requiresDigitValid">Must contain at least 1 digit</span>
+                <span class="danger" *ngIf="!requiresUppercaseValid">Must contain at least 1 uppercase character</span>
+                <span class="danger"  *ngIf="!requiresLowercaseValid">Must contain at least 1 lowercase character</span>
+                <span class="danger" *ngIf="!requiresSpecialCharsValid"> Must contain at least 1 special character</span>
+            </div>
+        </div>
+        <div class="form-container">
+            <label class="label" for="confirmPassword">Confirm password</label>
+           <div class="input-div">
+            <input class="field-input"  [type]="inputTypeConfirmPass ? 'text': 'password'" formControlName="confirmPassword">
+            <span class="show" (click)="showConfirmPassword()">{{passConfirmtype}}</span>
+           </div>
+            <div class="error" *ngIf="(submitted || f.confirmPassword.dirty) && f.confirmPassword.errors">
+                <span class="danger" *ngIf="f.confirmPassword.errors['required']">Confirm password</span>
+                <span class="danger"   *ngIf="f.confirmPassword.errors['minLength']">Password must be at least 8 characters long</span>
+                <span class="danger" *ngIf="f.confirmPassword.errors['mismatch']">Passwords do not match</span>
+            </div>
+        </div>
+        <input class="submit-btn" type="submit" value="Sign">
+      
+    </form>
+</div>

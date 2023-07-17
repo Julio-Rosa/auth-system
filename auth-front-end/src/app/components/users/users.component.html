@@ -1,0 +1,57 @@
+<div class="success-popup" *ngIf="successDeleted">User successfully deleted</div>
+<div class="error-popup" *ngIf="errorOnDelete">There was an error deleting the user, please try again!</div>
+<div *ngIf="error">
+    <h3>{{error}}</h3>
+</div>
+<div *ngIf="removeTrue" class="modal">
+    <p>{{removeMessage}}</p>
+    <div class="buttons">
+        <button class="confirm-btn" (click)="confirm()">Confirm</button>
+        <button class="cancel-btn" (click)="cancel()">Cancel</button>
+    </div>
+</div>
+
+<div class="main">
+    <div class="profile">
+        <div>
+            <h3 class="blue">Users</h3>
+            <p>List all users</p>
+        </div>
+    
+    </div>
+    <div class="line"></div>
+    <div class="container">
+        <div *ngIf="users.length > 0" class="table-div">
+           
+          
+           
+            <table>
+                <tr class="top-tr">
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                  </tr>
+              
+                <tr *ngFor="let user of users">
+                  <td>{{user.id}}</td>
+                  <td>{{user.firstName}} {{user.lastName}}</td>
+                  <td>{{user.username}}</td>
+                  <td>{{user.role | removeInvalidChars}}</td>
+                  <td><button class="delete-btn" (click)="remove(user.username)">Remove</button></td>
+                </tr>
+               
+               
+              </table>
+           
+           
+    
+        </div>
+        <div *ngIf="users.length === 0">
+            <h3>There are no users</h3>
+        </div>
+       
+    
+    </div>
+</div>

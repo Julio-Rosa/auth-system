@@ -1,0 +1,32 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+   
+    
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    
+}
+.general{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+    
+    
+
+}
+
+
+
+.info-div-column{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

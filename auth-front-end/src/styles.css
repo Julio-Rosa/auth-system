@@ -1,0 +1,270 @@
+body{
+    margin: 0;
+}
+.form-bg {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+   
+    
+    box-sizing: border-box;
+    padding: 48px;
+    width: 500px;
+    height: auto;
+
+
+}
+
+.sign {
+    font-size: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    
+}
+
+form {
+    background-color: #ffffff;
+    width: 80%;
+
+   
+
+    
+}
+
+.label {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600px;
+    display: block;
+    background-color: #ffffff;
+    margin-top: 1px;
+
+}
+
+.input-div {
+    display: flex;
+    flex-direction: row;
+    
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px 1px rgba(84, 105, 212, 0.877);
+    width: 100%;
+    height: 25px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+
+
+
+}
+
+
+
+
+
+.field-input {
+    text-decoration: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+
+}
+
+input:focus {
+    border: none;
+    outline: 1px solid rgb(84, 105, 212);
+    outline-offset: 0px;
+    border-radius: 1px;
+    box-shadow: 2px 1px 1px 1px transparent;
+}
+
+.show {
+    background-color: rgb(84, 105, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+
+
+}
+.show:hover {
+    background-color: white;
+    color: rgb(84, 105, 212);
+    border: 1px solid rgb(84, 105, 212);
+   
+
+
+}
+
+.submit-btn {
+    font-size: 16px;
+    width: 100%;
+    background-color: rgb(84, 105, 212);
+    color: #ffffff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.089);
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-top: 5px;
+    cursor: pointer;
+
+}
+
+.danger {
+    font-size: 13px;
+    color: red;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.success-popup {
+    background-color: rgb(32, 154, 16);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px #33333394;
+    min-width: 320px;
+    position: fixed;
+    left: 50%;
+    padding: 10px;
+    top: 5%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: 500;
+}
+
+.error-popup {
+    background-color: rgb(212, 84, 84);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px #33333394;
+    min-width: 320px;
+    position: fixed;
+    left: 50%;
+    padding: 10px;
+    top: 5%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: 500;
+}
+.blue{
+    color:  rgb(84, 105, 212);
+    font-weight: 900;
+}
+.line{
+    background-color: rgba(0, 0, 0, 0.394);
+    width: 80%;
+    height: 1px;
+}
+.delete-btn {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgb(212, 84, 84);
+    color: #ffffff;
+    border-radius: 4px;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 5px;
+    cursor: pointer;
+
+}
+.confirm-btn {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgb(32, 154, 16);
+    color: #ffffff;
+    border-radius: 4px;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 5px;
+    cursor: pointer;
+
+}
+.cancel-btn {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgb(212, 182, 84);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-top: 5px;
+    cursor: pointer;
+
+}
+.cancel-btn:hover {
+   
+    background-color: white;
+    color:rgb(212, 182, 84);
+    border: 1px solid rgb(212, 182, 84);
+   
+  
+
+}
+.confirm-btn:hover {
+   
+    background-color: white;
+    color:rgb(32, 154, 16);
+    border: 1px solid rgb(32, 154, 16);
+   
+  
+
+}
+.delete-btn:hover {
+   
+    background-color: white;
+    color: rgb(212, 84, 84);
+    border: 1px solid  rgb(212, 84, 84);
+   
+  
+
+}
+.active{
+    color: aqua
+}
+
+@media screen and (max-width: 1070px) {
+    
+    .form-bg {
+        
+        align-items: center;
+       
+      
+      
+    
+    
+    }
+}
+@media screen and (max-width: 800px) {
+    .form-bg {
+        
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+       
+      
+      
+    
+    
+    }
+    
+}

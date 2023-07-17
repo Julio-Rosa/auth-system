@@ -1,0 +1,53 @@
+<div class="main">
+    <div class="profile">
+        <div>
+            <h3 class="blue">Profile</h3>
+            <p>Manage your profile</p>
+        </div>
+    
+    </div>
+    <div class="line"></div>
+    <div class="general">
+       
+        <div class="general-informations">
+           <div class="informations-form">
+                <div class="form-container">
+                    <label class="label" for="id">Id</label>
+                    <div class="input-div">
+                        <input class="field-input"  type="text" disabled value="{{user.id}}">
+                    </div>
+                </div>
+                <div class="form-container">
+                    <label class="label " for="id">Username</label>
+                    <div class="input-div">
+                        <input class="field-input"  type="text" disabled value="{{user.username}}">
+                    </div>
+                </div>
+                <div class="form-container">
+                    <label class="label " for="id">Role</label>
+                    <div class="input-div">
+                        <input class="field-input"  type="text" disabled value="{{user.role | removeInvalidChars}}">
+                    </div>
+                </div>
+                <div class="info-div-column">
+                    <div class="form-container">
+                        <label class="label " for="id">Firstname</label>
+                        <div class="input-div">
+                            <input class="field-input"  type="text" disabled value="{{user.firstName}}">
+                        </div>
+                
+                    </div>
+                    <div class="form-container">
+                        <label class="label " for="id">Lastname</label>
+                        <div class="input-div">
+                            <input class="field-input" type="text" disabled value="{{user.lastName}}">
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+  
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,15 @@
+<div class="sidebar">
+    <div class="user-welcome">
+        <p>Welcome {{user.firstName}}!</p>
+    </div>
+    <div class="links">
+        <a class="a-link" routerLinkActive="active" routerLink="me">Profile</a>
+        <ng-template [ngIf]="isAdmin"><a class="a-link" routerLinkActive="active" routerLink="all">Users</a></ng-template>
+
+        <a class="a-link" routerLinkActive="active" routerLink="reset">Reset password</a>
+
+    </div>
+    <div class="logout-div">
+        <p (click)="logOut()" class="p-logout">Logout</p>
+    </div>
+</div>
